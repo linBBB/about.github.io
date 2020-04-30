@@ -1,0 +1,446 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+	overflow-x: hidden;
+}
+
+/*第一頁:home*/
+.home {
+	width: 100%;
+	margin: auto;
+	height: 2800px;
+	/*border: 1px solid #888;*/
+	/*padding:20px;*/
+	background-color: rgb(242, 220, 196);
+}
+
+a {
+	text-decoration: none;
+}
+
+.wrap {
+	/*background-color: rgb(242, 220, 196);*/
+	overflow: hidden;
+}
+
+.center {
+	margin: 0 auto;
+}
+
+.top-box {
+	margin: 120px auto 184px auto;
+	text-align: center;
+	width: 500px;
+}
+
+p {
+	letter-spacing: 0.4em;
+	margin-bottom: 16px;
+	color: #555;
+}
+
+.content {
+	width: 524px;
+}
+
+.bottom {
+	margin-top: 130px;
+	padding-top: 10px;
+	width: 524px;
+	text-align: center;
+	/*border: 1px solid #CCC;*/
+}
+.bottom img{
+	opacity: .6;
+	transition: 1s;
+}
+.bottom img:hover{
+	opacity: 1;
+}
+
+
+/*-------------第二頁:about----------------*/
+
+.about {
+	width: 90%;
+	/*height: 100%;*/
+	height: 1293px; 
+	/* D. 因為左下角的圖是用 absolute 定位，height設 100% 的話會漠視那張圖的高度 */
+	/* D. 所以這頁的 height 要設比 100% 更多，才會包含那張圖  */
+	/*border: 1px solid #888;*/  /*對位置用記得刪掉*/
+	margin: auto;
+	position: relative;
+}
+
+
+/*--------------------------*/
+
+.page2wrap{
+	width: 80%;
+}
+
+
+
+/*--------------------------*/
+.bg-wrap {
+	height: 1050px;
+	width: 80%;
+	min-width: 1270px;  /* D. 設最小寬度，讓 float 的段落在螢幕太窄時不會跑下去 */ 
+	background-color: rgb(205, 249, 244); 
+	/*position: absolute;
+	top: 200px;
+	left: 180px;*/
+	top: 200px;
+	position: relative; /* D. 作為裡面成員的定位基準點 */
+	font-family: Meiryo, '微軟正黑體', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+	/* D. 一般電腦裡沒有 Meiryo 這個字型, Noto Sans TC 是 google-font 的新黑體 */
+} /*藍色底*/
+
+
+.txt1 h1{
+	font-weight: 700;
+	font-size: 8em;
+	letter-spacing: 0.1em;
+	display: inline-block; /*要讓右邊出現圖*/
+	margin-left: -80px; /* D. 定位 ABOUT  */ 
+	margin-top: 40px;
+
+}
+.a2 {
+	/*margin-left: 1200px;*/
+    float: right; /* D. float 到右邊，然後用 margin 來位移 */
+    margin-right: -80px;
+    margin-top: 60px;
+} /*右邊坡浪圖*/
+
+
+.txt-wrap {
+	display: inline-block;
+}
+
+.txt-wrap-1 {
+	width: 340px; /* D. 第一篇文字的寬度 */
+	margin-right: 40px; /* D.f 第一篇文字和第二篇文字左右間隔 */
+}
+
+.txt-wrap-2 {
+	width: 540px; /* D. 第二篇文字的寬度 */
+}
+
+.txt-title {
+	position: relative; /* D. 作為裡面成員的定位基準點 */
+	margin-bottom: 50px; /* D. ME ._. 44 和下面文字的間隔 */
+}
+
+.txt-title h3 {
+	font-weight: 700;
+	font-size: 4em;
+	letter-spacing: 0.2em;
+	display: inline-block;
+	padding: 40px;
+} /*ME_44整塊*/
+
+.txt-title .me {
+	margin-left: -20px; /* D. 定位 Me */
+ 	padding-left: 0;   
+    margin-left: 9px;
+}
+
+.txt-title .name {
+	margin-left: -20px; /* D. 定位 44 */
+ 	padding-left: 0;   
+	margin-left: 42px;
+}
+
+.txt-title img {
+	position: absolute; /* D. 定位 ._. */
+    right: 0;
+    top: 18px;
+}
+
+.txt3 {
+	line-height: 1.3em;
+	font-size: 0.8em;
+	/*margin-left: 480px;*/
+    float: right; /* D. float 到右邊，然後用 margin 來位移 */
+    margin-right: 0px; /* D. 中間文字和右邊藍色邊界的間隔 */
+    margin-top: 90px; /* D. ME ._. 44 和上面 About 的間隔 */
+}/*下面的字*/
+
+.about-txt{
+	float: left;
+	padding: 10px;
+}
+.txt3 h4{
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 2em;
+	font-weight: 700;
+	color: rgb(48,81,50);
+}
+.txt3 h5{
+	font-weight: 600;
+	/*color: rgb(48,81,50);*/
+}
+.txt3 .a4{
+	background: url(img/a-4.svg)0 0 no-repeat;
+	width: 14px;
+	height: 14px;
+	margin-bottom: 8px;
+	margin-top: -8px;
+} /*斜線圖*/
+
+
+.bottom-img {
+	/*clear:left;*/ /* D. 上面的 txt3 本身加上 clearfix 就可以 */
+	width: 210px; /*要記得幫他加大小*/
+	height: 350px;
+	/*margin-left: 50px;
+	margin-top: -120px; */
+    position: absolute;  /* D. 用 absolute 定位，基準點是藍色背景 */
+    bottom: -94px;
+    left: 50px;
+}
+
+
+
+/*-------------第三頁:work----------------*/
+
+.work {
+	width: 80%;
+	height: 100%;
+	margin: auto;
+	/*border: 1px solid #888;*/ /*對位置用之後會刪掉*/
+	position: relative; /*讓字對位置*/
+}
+
+/*---------menu-------------*/
+
+.menu-bar{
+    /*background-color: #fff;
+    opacity: 0.4;*/
+    /*width: 350px;*/
+    /*height: 50px;*/
+    top:30px;
+	right: 10px;
+	/*margin-bottom: 100px;*/
+	position: fixed;
+	direction:rtl; /*文字靠右對齊*/
+	z-index: 99; /* D. 設高一點，讓 menu-bar 不會被其他頁的東西擋住 */
+ }
+.menu {
+	/*top:30px;
+	margin-bottom: 100px;*/
+	/*text-align: right;*/ /*讓 menu 往右靠*/
+   /* right: 40px;
+    position: fixed;*/
+}
+
+.menu li {
+	/*display: inline;*/
+	margin-right: 30px;
+	margin-top: 8px;
+}
+.menu a {
+	font-size: 0.8em;
+	letter-spacing: 0.3em;
+	color: #888;
+}
+.menu a:hover{
+	padding-bottom:2px;  /*加底線*/
+	border-bottom:1px solid #555;
+}
+/*--------------------------*/
+.work p {
+	font-size: 9em;
+	position: absolute; /*讓字對位置*/
+	top: 400px;
+	font-weight: 700;
+	color: #000;
+	letter-spacing: 0.2em;
+	z-index: 10;
+}
+/*--------------------------*/
+
+#area3 .img-list { 
+	margin: 0 auto; /* 大區塊置中 */
+	text-align: center; /* 讓 inline-block 的小孩置中 */
+	font-size: 0; /* 用來去掉 inline-block 之間的空白 */
+	/*top:200px;
+	position: relative;*/
+	margin-top: 200px;
+}
+
+.img-list a {
+	display: inline-block;
+	width: 400px;
+	height: 320px;
+	cursor: pointer;
+}
+
+#area3 .img-list li {
+	/*float: left;*/ 
+	display: inline-block; /* 改成用 inline-block */
+	background-size: 400px 320px !important; 
+	/* D. 下面的 li:nth-child css 優先權比較高，加 important 來提高優先權*/
+}
+
+
+#area3 .img-list li:nth-child(1) {
+	background: url(img/1.jpg);
+}
+#area3 .img-list li:nth-child(2) {
+	background: url(img/2.jpg);
+}
+#area3 .img-list li:nth-child(3) {
+	background: url(img/3.jpg);
+}
+
+#area3 .img-list li:nth-child(4) {
+	background: url(img/4.jpg);
+}
+#area3 .img-list li:nth-child(5) {
+	background: url(img/5.jpg);
+}
+#area3 .img-list li:nth-child(6) {
+	background: url(img/6.jpg);
+}
+#area3 .img-list li:nth-child(7) {
+	background: url(img/7.jpg);
+}
+#area3 .img-list li:nth-child(8) {
+	background: url(img/8.jpg);
+}
+#area3 .img-list li:nth-child(9) {
+	background: url(img/9.jpg);
+}
+#area3 .img-list li:nth-child(10) {
+	background: url(img/10.jpg);
+}
+#area3 .img-list li:nth-child(11) {
+	background: url(img/11.jpg);
+}
+#area3 .img-list li:nth-child(12) {
+	background: url(img/12.jpg);
+}
+#area3 .img-list li:nth-child(13) {
+	background: url(img/13.jpg);
+}
+#area3 .img-list li:nth-child(14) {
+	background: url(img/14.jpg);
+}
+#area3 .img-list li:nth-child(15) {
+	background: url(img/15.jpg);
+}
+#area3 .img-list li:nth-child(16) {
+	background: url(img/16.jpg);
+}
+#area3 .img-list li:nth-child(17) {
+	background: url(img/17.jpg);
+}
+#area3 .img-list li:nth-child(18) {
+	background: url(img/18.jpg);
+}
+
+/*--------------------------*/
+/*footer a{
+	background: url(img/--.jpg) 0 0 no-repeat;
+	position:fixed;
+	right:25px;
+	bottom:50px;
+	padding:10px;
+	width: 30px;
+	height: 40px;
+}
+*/
+
+/*-------------第四頁:contact----------------*/
+.contact {
+	width: 90%;
+	height: 1030px;
+	/*border: 1px solid #888;*/
+	margin:auto;
+	/*position: relative;*/
+}
+/*------------------------------------*/
+
+.contact-text {
+	text-align: center;
+	margin-top: 300px; /* D. CONTACT 和上面 menu 的間隔 */
+}
+
+.contact h1 {
+	/*position: absolute;*/
+	font-size: 7em;
+	font-weight: 700;
+	color: #000;
+	letter-spacing: 0.1em;
+}
+
+.contact a.mail {
+	color: #000;
+	letter-spacing: 0.4em;
+	font-weight: 700;
+	padding-bottom:4px;  /*加底線*/
+	border-bottom:2px solid #000;
+}
+
+ul.contact-menu {
+	width: 174px;
+	margin: 0 auto;
+}
+
+#area4 ul.contact-menu li {
+	width: 50px;
+	height: 50px;
+	float: left;
+	opacity: 0.5;
+	margin-top: 30px;
+	padding: 4px;
+}
+
+#area4 ul.contact-menu li:nth-child(1) {
+	background: url(img/facebook2.jpg) 0 0 no-repeat;
+	transition: 1s; /*動畫*/
+}
+#area4 ul.contact-menu li:nth-child(2) {
+	background: url(img/logo104.jpg) 0 0 no-repeat;
+	transition: 1s;
+}
+#area4 ul.contact-menu li:nth-child(3) {
+	background: url(img/pinterest30.jpg) 0 0 no-repeat;
+	transition: 1s;
+}
+
+#area4 ul.contact-menu li:hover {
+	opacity:1;
+}
+
+/*我有設a 不過滑鼠放到圖片上不能按？*/
+/* D. a 被 background-image 擋住了, 讓 a 變 inline-block, 然後設成和圖片一樣大就可以 */
+.contact-menu a {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1; /* ie 6/7 */
+}
+/* D. 大 div 裡面有一些有 float 的成員的話，這個 div 要再加上 clearfix
+clearfix 是一個通用的 css class
+網路上找的到代碼 */
